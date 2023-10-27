@@ -1,11 +1,62 @@
-# Recursive-function
+## EX-07 Recursive-function
 
-##Aim: To write a C# program to reverse a number using recursive function.
+## Aim:
+To write a C# program to reverse a number using recursive function.
 
-##Algorithm:
+## Algorithm:
+## Step1:
+Create a function for reversing.
 
-##Program:
+## Step2:
+Get the number from the user.
 
-##Output:
+## Step3:
+In the function find reminder of the number and multiply it by 10 and add the reverse number.
 
-##Result:
+## Step4:
+Recusively call this function to get the reversed number.
+
+## Step5:
+print the reversed number.
+
+## Program:
+NAME: THIRISHA S
+REG NO: 212222230160
+```
+python
+using System;
+namespace rec
+{
+    class Program
+    {
+        int rem = 0, rev = 0;
+        public int reverse(int n)
+        {
+            rem = n % 10;
+            if (rem == 0)
+            {
+                return rev;
+            }
+            else
+            {
+                rev = rev * 10 + rem;
+                return reverse(n / 10);
+            }
+        }
+        static void Main(string[] args)
+        {
+            int n;
+            Console.WriteLine("Enter a Number to reverse: ");
+            n = Convert.ToInt32(Console.ReadLine());
+            Program p1 = new Program();
+            Console.WriteLine("Reversed Number is " + p1.reverse(n));
+        }
+    }
+}
+```
+## Output:
+![image](https://github.com/Thirisha-s/Recursive-function/assets/120380280/cf94969d-3fdf-43f3-964d-2e900486dec2)
+
+## Result:
+The C# program to reverse a number using recursive function is executed successfully.
+
